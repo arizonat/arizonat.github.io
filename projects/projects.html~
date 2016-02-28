@@ -1,0 +1,190 @@
+<html>
+<head>
+  <link rel="stylesheet" href="../css/foundation.css" />
+  <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <!-- Top navbar -->
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name"><h1><a href="../index.html">Levi Cai</a></h1></li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+	<li class="divider"></li>
+	<li class="active">
+	  <a href="../projects/index.html">Projects</a>
+	</li>
+	<li class="divider"></li>
+	<li>
+	  <a href="../research/index.html">Research</a>
+	</li>
+	<li class="divider"></li>
+	<li>
+	  <a href="../art/index.html">Art</a>
+	</li>
+	<li class="divider"></li>
+	<li>
+	  <a href="../teaching/index.html">Teaching</a>
+	</li>
+	<li class="divider"></li>
+	<li>
+	  <a href="../resume.pdf">Resume</a>
+	</li>
+	<li class="divider"></li>
+	<li>
+	  <a href="http://www.levicai.com/old_index.html">Old Site</a>
+	</li>
+      </ul>
+    </section>
+  </nav>
+
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h1>Projects</h1>
+      Below are some projects that I've worked on. Apologies for the long list format/large photos and hence super long load times. I haven't had a chance to make this performant (yet!).
+      <hr>
+    </div>
+  </div>
+
+
+  <!-- Multi-robot Path Planning -->
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h2>Multi-robot Path Planning</h2>
+    </div>
+  </div>
+
+  <div id="multirobot" class="row">
+    <div class="columns small-8 small-centered">
+      The past year I have been working on studying path planning in single- and multi-robot settings. Here are some algorithms I've implemented recently (current research posted later).
+      <br><br>
+
+      M* for nonholonomic robots with ROS/Gazebo (<a href="http://biorobotics.ri.cmu.edu/papers/paperUploads/iros2011_wagner.pdf">Wagner et al.</a>):
+      <br>
+      M* is a search-based planning algorithm for multi-robot settings, based on A*, M* guarantees optimal paths, and minimizes expansions from A* by only expanding states when collisions are detected.
+      <br>
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/7FWxkDe1vNY" frameborder="0" allowfullscreen></iframe>
+      <br><br>
+
+      HRVO using CUDA (<a href="http://gamma.cs.unc.edu/HRVO/">Snape et al.</a>):
+      <br>
+      HRVO (Hybrid Reciprocal Velocity Obstacles) is a method to model moving obstacles, new velocities are chosen that lie outside obstacle boundaries for collision avoidance. This method is highly-parallelizable. More details at: <a href="https://github.com/arizonat/CIS565-FinalProject">https://github.com/arizonat/CIS565-FinalProject</a>
+      <br>
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/9E0RYBbbvJQ" frameborder="0" allowfullscreen></iframe>
+      <br><br>
+
+      CAPT for quadrotors (<a href="http://ijr.sagepub.com/content/33/1/98.abstract">Turpin et al.</a>):
+      <br>
+      CAPT assumes agents are "unlabeled", so any agent can pick any goal (rather than having a specific goal as in traditional multi-robot planning settings). This allows us to optimally select goals for each agent using the hunagarian algorithm.
+      <br>
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/1Y3JyfZE_aw" frameborder="0" allowfullscreen></iframe>
+      <hr>
+    </div>
+  </div>
+  
+
+  <!-- FSAE -->
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h2>Penn FSAE - Red and Blue Racing</h2>
+    </div>
+  </div>
+
+  <div id="fsae" class="row">
+    <div class="columns small-8 small-centered">
+      <img src="../img/projects/fsae-team2.jpg">
+      <br><br>
+      <p>
+	As an undergrad, I was on the <a href="http://www.seas.upenn.edu/~fsae/">Penn Formula SAE team (site not up to date)</a> where I worked on the electronics and eventually was the subteam lead for the 2011 season. Our team consisted of Ryan Kumbang, Karan Desai, Nisan Lerea, and myself (+tons of help from alums and help from Keith and Praveer). Our team had historically one of the most custom electronic systems (self made CAN, boards, etc...). I was in charge of making sure our shift (pneumatics), clutch (linear actuator), ECU, etc...operated smoothly.
+      </p>
+
+      <a href="../img/projects/fsae-diagram.png"><img src="../img/projects/fsae-diagram.png"></a>
+      
+      In order to save on weight and space, we condensed all the major electronics components besides the motors/pistons/steering wheel into a little box on the back of the car.
+      <a href="../img/projects/fsae-electric-box.jpg"><img src="../img/projects/fsae-electric-box.jpg"></a>
+
+      Some test footage of our car (can't seem to find competition footage):
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/WysxkAmVK_I" frameborder="0" allowfullscreen></iframe>
+
+    <hr>
+    </div>
+  </div>
+
+  <!-- Modlab -->
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h2>Modlab: CKbots</h2>
+    </div>
+  </div>
+  
+  <div id="modlab" class="row">
+    <div class="columns small-8 small-centered">
+      <img src="../img/projects/ckbot.png">
+      <br><br>
+      <p>
+	Worked in Modlab for several years developing software for their CKbots. The CKbots are modular robots that allow us to create arbitrary robot configurations (2 examples below from the Modlab site):
+      </p>
+      <img src="../img/projects/ckbot2.jpg">
+      <p>
+	I worked on earlier versions of the CKbots that communicated via CAN-bus, but required manual screw connections. There were some versions that used magentic faces to connect and disconnect automatically, but I did not interface with those versions.
+      </p>
+
+      <p>
+      Implemented a series of high- and low-level software interfaces in Linux for the CKbots, primarily in Python and C (for the embedded portions). Worked closely with Dr. Shai Revzen and Jimmy Sastra. Enabled specification of gaits, combining gaits, monitoring CAN bus, etc... For more general information about the CKbots: <a href="http://modlabupenn.org/ckbot/">modlabupenn.org/ckbot</a>.
+      </p>
+      <p>
+      The communication between modules was based off of the Robotics Bus Protocol detailed <a href="http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=852709">here</a>.
+      </p>
+
+      <hr>
+    </div>
+  </div>
+
+
+  <!-- Robockey -->
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h2>Robockey</h2>
+    </div>
+  </div>
+
+  <div id="robockey" class="row">
+    <div class="columns small-8 small-centered">
+      <img src="../img/projects/robockey.jpg">
+      <br><br>
+      <p>
+      For my final project in my mechatronics class I worked with Michael Posner and Sydney Jackopin to build 3 hockey-playing robots. To find out more competition details check out <a href="http://www.robockey.com">www.robockey.com</a>. We made it to the quarter finals. I primarily worked on the entire electrical portion, but also helped with parts of the mechanical and software portions as well. Here's a compilation of our matches:
+      </p>
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/bafh66AKqgw" frameborder="0" allowfullscreen></iframe>
+      <hr>
+    </div>
+  </div>
+
+
+  <!-- CAD -->
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h2>CAD</h2>
+    </div>
+  </div>
+
+  <div id="cad" class="row">
+    <div class="columns small-8 small-centered">
+      For a final project in our intro. to CAD course I modelled a toy transformer that could actually transform in the model as well (though I cannot seem to locate the model or transforming video anymore). Here's a blow up version of the model though:
+      
+      <hr>
+    </div>
+  </div>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/fastclick.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+    $(document).foundation('reflow');
+  </script>
+
+</body>
+
+</html>

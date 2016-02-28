@@ -1,0 +1,194 @@
+<html>
+<head>
+  <link rel="stylesheet" href="../css/foundation.css" />
+  <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <!-- Top navbar -->
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name"><h1><a href="../index.html">Levi Cai</a></h1></li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+	<li class="divider"></li>
+	<li class="active">
+	  <a href="../projects/index.html">Projects</a>
+	</li>
+	<li class="divider"></li>
+	<li>
+	  <a href="../art/index.html">Art</a>
+	</li>
+	<li class="divider"></li>
+	<li>
+	  <a href="../teaching/index.html">Teaching</a>
+	</li>
+	<li class="divider"></li>
+	<li>
+	  <a href="../resume.pdf">Resume</a>
+	</li>
+	<li class="divider"></li>
+	<li>
+	  <a href="http://www.levicai.com/old_index.html">Old Site</a>
+	</li>
+      </ul>
+    </section>
+  </nav>
+
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h1>Projects</h1>
+      <p>
+	Here are a collection of some projects/work that I have been apart of in the past few years. Some of these pages are still under construction, so forgive me if they don't link to any descriptions yet, they'll be here soon!
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h2>Research</h2>
+      <ul class="small-block-grid-3 medium-block-grid-4">
+	<li>
+	  <a class="th" href="mstar.html">
+	    <img src="../img/projects/magic.png">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="ckbot.html">
+	    <img src="../img/projects/ckbot.png">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="sentiment.html">
+	    <img src="../img/projects/sentiment.png">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="lagr.html">
+	    <img src="../img/projects/minilagr.jpg">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="lagr.html">
+	    <img src="../img/projects/lagr.jpg">
+	  </a>
+	</li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h2>Extracurriculars</h2>
+      <ul class="small-block-grid-3 medium-block-grid-4">
+	<li>
+	  <a class="th" href="fsae.html">
+	    <img src="../img/projects/fsae.jpg">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="fsae.html">
+	    <img src="../img/projects/robocup-nao-pair.jpg">
+	  </a>
+	</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h2>Coursework</h2>
+      <ul class="small-block-grid-3 medium-block-grid-4">
+	<li>
+	  <a class="th" href="slam.html">
+	    <img src="../img/projects/thor.jpg">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="barrel.html">
+	    <img src="../img/projects/barrel.png">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="nanoplus.html">
+	    <img src="../img/projects/nanoplus.png">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="robockey.html">
+	    <img src="../img/projects/robockey.jpg">
+	  </a>
+	</li>
+
+	<li>
+	  <a class="th" href="poogle.html">
+	    <img src="../img/projects/poogle.png">
+	  </a>
+	</li>
+	
+	<li>
+	  <a class="th" href="transformer.html">
+	    <img src="../img/projects/transformer.png">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="saast.html">
+	    <img src="../img/projects/saast1.png">
+	  </a>
+	</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h2>Side Projects</h2>
+      <ul class="small-block-grid-3 medium-block-grid-4">
+	<li>
+	  <a class="th" href="clock.html">
+	    <img src="../img/projects/clock.jpg">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="wiimote.html">
+	    <img src="../img/projects/wiimote.png">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="device-wall.html">
+	    <img src="../img/projects/device-wall.jpg">
+	  </a>
+	</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns small-8 small-centered">
+      <h2>Professional</h2>
+      <ul class="small-block-grid-3 medium-block-grid-4">
+	<li>
+	  <a class="th" href="mst.html">
+	    <img src="../img/projects/mst-home.png">
+	  </a>
+	</li>
+	<li>
+	  <a class="th" href="ibm-msm.html">
+	    <img src="../img/projects/ibm-phone-1.jpeg">
+	  </a>
+	</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/fastclick.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+    $(document).foundation('reflow');
+  </script>
+
+</body>
+
+</html>
