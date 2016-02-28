@@ -1,0 +1,441 @@
+<html>
+
+<head>
+<meta></meta>
+<script type="text/javascript">var a=new Date,b=a.getUTCHours();if(0==a.getUTCMonth()&&2012==a.getUTCFullYear()&&((18==a.getUTCDate()&&13<=b)||(19==a.getUTCDate()&&0>=b)))window.location="http://sopastrike.com/strike";</script>
+
+<title>Resume of "The Wannabe DJ" Levi Cai</title>
+
+<style type="text/css">
+	body{
+		margin:0 auto;
+		background: black;
+		font:16px helvetica;
+		color:white;
+		overflow:hidden;
+	}
+	p{
+		font:16px helvetica;
+		color:white;
+	}
+	h1{
+		font-size:18px;
+		font-family:helvetica;
+		color:white;
+	}
+	h2{
+		font-size:18px;
+		font-family:helvetica;
+		Color:white;
+	}
+	h3{
+		font:12px/20px helvetica;
+		color:white;
+	}
+	.bullet{
+		font:bold 16px helvetica;
+		color:white;
+	}
+	#container{
+		margin:0 auto;
+		position:relative;
+		height: 100%;
+		width: 100%;
+	}
+	#background{
+		top:50%;
+		margin:0 auto;
+		margin-top: -342px;
+		position:relative;
+		height: 684px;
+		width: 1024px;
+		background:url("images/hd_background3.png") no-repeat;
+		z-index:0;
+		vertical-align: middle;
+	}
+	.selectSectors{
+		position:absolute;
+		top:1px;
+		left:0px;
+		height:684px;
+		width:1024px;
+		z-index:1;
+	}
+	.content{
+		background:url("images/the_pixel.png") repeat;
+		position:absolute;
+		top:20px;
+		left:20px;
+		width:370px;
+		z-index:2;
+		opacity:0;
+		
+		display:blocked;
+		
+		padding:15px;
+	}
+
+</style>
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/mootools/1.3.0/mootools-yui-compressed.js'>
+</script>
+
+<script type="text/javascript">
+
+	var currSector = "home";
+	var desiredSector = "";
+	
+	var numSectors = 6;
+	var sectorMap = new Array();
+	sectorMap["home"] = 0;
+	sectorMap["research"] = 1;
+	sectorMap["activities"] = 2;
+	sectorMap["contact"] = 3;
+	sectorMap["awards"] = 4;
+	sectorMap["skills"] = 5;
+
+	var lock = 0;
+	var next = "research";
+	var curr = "home";
+	
+	function display(sector){
+	/* Main function for Updating Resume Content */	
+		$(currSector).set('tween', {
+			duration:1000,
+			
+			onComplete: function(){
+				for (image in sectorMap){
+					if(image != sector)
+						document.getElementById(currSector).style.display = "block";
+					else
+						document.getElementById(sector).style.display = "none";
+				}
+				$(sector).set('tween',{duration:1000});
+				$(sector).tween('opacity',1);
+				
+			}
+		});
+		$(currSector).tween('opacity',0);
+
+		currSector = sector;
+	}
+	
+	function animate(sector, desired){
+	/* Rotates platter to the appropriate sector */
+		if (!desired)
+			var desired = desiredSector
+	
+		if(curr == desired)
+			return;
+		
+		curr = sector;
+
+		document.getElementById("sector_img").src = "images/" + sector + "2.png";
+		switch(sector)
+		{
+			case "home":
+				next = "research";
+				break;
+			case "research":
+				next = "activities";
+				break;
+			case "activities":
+				next = "contact";
+				break;
+			case "contact":
+				next = "awards";
+				break;
+			case "awards":
+				next = "skills";
+				break;
+			case "skills":
+				next = "home";
+				break;
+		}
+		
+		setTimeout("test()", 500);
+	}
+	
+	function test(){
+		animate(next);
+	}
+	
+	function fadeImages(next_image, sector){
+	/* Fades background sector image in and fades foreground image out */
+		document.getElementById("sector_img2").src = document.getElementById("sector_img").src;
+		document.getElementById("sector_img2").style.opacity = 1;
+		document.getElementById("sector_img").style.opacity = 0;
+		document.getElementById("sector_img").src = "images/" + next_image + "2.png";
+		$("sector_img2").set('tween',{
+			onComplete: function(){rotateAnimation(sector);}
+		});
+		$("sector_img2").tween('opacity',0);
+		$("sector_img").tween('opacity',1);
+	}
+	
+	function rotate(distance){
+	/* Main function for Handling Onclick */
+
+		// Update sectorMap (distances from currSector)
+		for (sector in sectorMap){
+			// Update Resume Content
+			if (sectorMap[sector] == distance){
+				desiredSector = sector;
+				display(sector);
+				animate(next);
+			}
+			
+			sectorMap[sector] = (sectorMap[sector] - distance + numSectors) % numSectors;
+		}
+	}
+
+	function fadeIn(element, time){
+		if (!time)
+			time = 1000;
+		$(element).set('tween', {duration: time});
+		$(element).tween('opacity', 1);
+		
+		var img1 = new Image(1024,684);
+		var img2 = new Image(1024,684);
+		var img3 = new Image(1024,684);
+		var img4 = new Image(1024,684);
+		var img5 = new Image(1024,684);
+
+		img1.src = "images/research2.png";
+		img2.src = "images/activities2.png";
+		img3.src = "images/contact2.png";
+		img4.src = "images/skills2.png";
+		img5.src = "images/awards2.png";
+		
+		animateStartup("research");
+	}
+	
+	var current;
+	var nextStart;
+	var num = 12;
+	
+	function animateStartup(sector){
+		if(num == 0)
+			return;
+		
+		num--;
+		document.getElementById("sector_img").src = "images/" + sector + "2.png";
+		switch(sector)
+		{
+			case "home":
+				nextStart = "research";
+				break;
+			case "research":
+				nextStart = "activities";
+				break;
+			case "activities":
+				nextStart = "contact";
+				break;
+			case "contact":
+				nextStart = "awards";
+				break;
+			case "awards":
+				nextStart = "skills";
+				break;
+			case "skills":
+				nextStart = "home";
+				break;
+		}
+		
+		setTimeout("callStart()", 250);
+	}
+	
+	function callStart(){
+		animateStartup(nextStart);
+	}
+	
+	
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33854183-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+
+<body onLoad="fadeIn('container',1500)">
+	<embed src="/songs/ubuntu_startup.mp3" autostart=true hidden=true loop=false> 
+
+	<div id="container" style="opacity:0">
+		
+		<div id="background">
+			<img src="images/home2.png" id="sector_img" class="selectSectors" border="0" usemap="#sectors">
+			<img src="images/home2.png" id="sector_img2" class="selectSectors" style="opacity:0" border="0" usemap="#sectors">
+			<map name="sectors">
+				<area shape="polygon" coords="680,252,780,186,840,86,930,73,846,229,697,327" href="javascript:void(0)" onClick="rotate(1)">
+				<area shape="polygon" coords="466, 126, 504, 125, 481, 191, 507, 260, 457, 304, 430, 233" href="javascript:void(0)" onClick="rotate(5)">
+				<area shape="polygon" coords="467, 126, 504, 126, 531, 83, 575, 42, 633, 4, 590, 4, 526, 54" href="javascript:void(0)" onClick="rotate(4)">
+				<area shape="polygon" coords="843, 84, 932, 75, 913, 4, 830, 4, 851, 40" href="javascript:void(0)" onClick="rotate(2)">
+				<area shape="polygon" coords="459, 304, 504, 257, 575, 285, 681, 258, 696, 328, 572, 352" href="javascript:void(0)" onClick="rotate(0)">
+			</map>
+	
+			<div id="home" class="content" style="display:block; padding-top:70px; padding-left:80px; width:315px; opacity:1;">
+			
+				<div style="position:absolute; top:20px; left:20px;">
+				<img src="images/title_image2.png" style="z-index:1; position: absolute; top:-10px; left:-10px;">
+				</div>
+			
+				<h1><u> Welcome to my <span style="color:red"> resume </span>&nbsp&nbsp&nbsp </u></h1>
+			
+				<p> Hi, my name is Levi Cai.
+			
+				<p> Though sometimes I wish I were a DJ,
+					I actually spin a different kind of 
+					disk millions of times faster. </p>
+					
+
+				<p> I am a graduate from the University of Pennsylvania with a major in 
+				Computer Science and minor in Mathematics. </p>
+					
+				<p> Select a coloured hard drive sector to
+					see what other kinds of data I have stored. 
+					Who knows, maybe some of it is music 
+					to you too? </p>
+					</br>
+				
+			</div>
+			
+			<div id="research" class="content">
+				<h2><u> levicai@resume:~/<span style="color:red">research</span>> &nbsp&nbsp&nbsp </u></h2>
+			
+				<p> Ever since my junior year in high school, I have been active in the 
+					research community, primarily in fields related to robotics, 
+					computer vision, computation neuroscience, etc... </p>
+					
+				<p> Here are the research-oriented positions I have held: </p>
+			
+				<span class="bullet"> CKBot Software Developer</span>  
+				</br>(2009-present)
+				</br> Univ. of Pennsylvania: GRASP - ModLab
+				</br> Advisors:Shai Revzen and Prof. Mark Yim
+				</br></br>
+				
+				<span class="bullet"> Comp. Neuroscience Rachleff Scholar </span> 
+				</br>(Summer 2010) 
+				</br> Univ. of Pennsylvania: Rachleff Scholars Program
+				</br> Advisor: Prof. Daniel D. Lee
+				</br> Paper: "Acoustic Spike Trains and Information Theory for Robots"
+				</br></br>
+				
+				<span class="bullet"> Robotics NSF REU </span>  
+				</br>(2007-2008)
+				</br> Univ. of Colorado, Boulder: Intel. in Action Lab
+				</br> Advisors: Dr. Gregory Grudic, Michael Otte
+				</br>
+				_______________________________________	
+			</div>
+			
+			<div id="activities" class="content">
+				<h2><u> levicai@resume:~/<span style="color:red">activities</span>> &nbsp&nbsp&nbsp </u></h2>
+			
+				<p> If you are looking for some activities I have participated in
+				then you have come to the right place: </p>
+			
+				<span class="bullet"> Univ. of Pennsylvania RoboCup </span> 
+				</br> (2009-present) 
+				</br> Highest Position: Vision Team Leader
+				</br> Advisor: Prof. Daniel D. Lee
+				</br></br>
+				
+				<span class="bullet"> Univ. of Pennsylvania Formula SAE </span>
+				</br> (2008-present) 
+				</br> Highest Position: Electrical Team Leader
+				</br></br>
+				
+				<span class="bullet"> Univ. of Pennsylvania SMP: Instructor </span>
+				</br> (Summer 2009) 
+				</br> Co-taught a 6-week engineering course for
+				</br> the Summer Mentorship Program at the
+				</br> Univ. of Pennsylvania for high school students
+				</br></br>
+				
+				<span class="bullet"> NCSSM: FIRST Robotics Mentor </span>
+				</br> (2012-2013) 
+				</br> Mentored a FIRST robotics team of high school
+				</br> students and worked closely with other mentors at
+				</br> The North Carolina School of Science and Mathematics located in Durham, NC.
+				</br></br>
+				
+				<span class="bullet"> FACTS K-8 School: Robotics Instructor </span>
+				</br> (2008-2009) 
+				</br> Volunteer robotics mentor for 3rd - 8th graders
+				</br>
+				
+				_______________________________________	
+				
+				
+			</div>
+			
+			<div id="contact" class="content">
+				<h2><u> levicai@resume:~/<span style="color:red">contact</span>> &nbsp&nbsp&nbsp </u></h2>
+				
+				<p> Apparently, Computer Scientists spend a lot of time in front of a
+				computer so, like me, they can generally be reached by the trendy "email"
+				service:  </p>
+				
+				<span class="bullet"> Email: </span> cail(at)seas.upenn.edu
+				</br>
+				_______________________________________	
+			</div>
+			
+			<div id="awards" class="content">
+				<h2><u> levicai@resume:~/<span style="color:red">awards</span>> &nbsp&nbsp&nbsp </u></h2>
+				
+				<p> Here are some of the awards/recognitions that I have achieved: </p>
+				
+				<span class="bullet"> University of Pennsylvania: Rachleff Scholar </span>
+				</br> (2008-2012)
+				</br> Engineering Scholars Research
+				</br></br>
+				
+				<span class="bullet"> IBM Thomas J. Watson Scholarship </span>
+				</br> (2008-2012)
+				</br>
+				_______________________________________	
+			</div>
+			
+			<div id="skills" class="content">
+				<h2><u> levicai@resume:~/<span style="color:red">skills</span>> &nbsp&nbsp&nbsp </u></h2>
+				
+				<p> I am proficient in the following categories (numbers in parentheses
+					represent the number of years I have developed the corresponding
+					skill and are listed by order of preference): </p>
+				
+				<span class="bullet"> Programming Languages </span>
+				</br> Python(5), Javascript(4), C(6), MATLAB/MEX(6), Java(9) 
+				</br></br>
+				
+				<span class="bullet"> Operating Systems </span>
+				</br> Linux: Ubuntu(5) and OpenSUSE(1), Windows(12+)
+				</br></br>
+				
+				<span class="bullet"> Miscellaneous </span>
+				</br> SolidWorks, EAGLE (PCB Layout),
+				</br> Adobe Illustrator/Photoshop
+				</br>
+				</center>
+				_______________________________________	
+			</div>
+			
+		</div>
+		
+	</div>
+
+</body>
+</html>
