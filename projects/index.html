@@ -89,26 +89,29 @@
 
   <div id="multirobot" class="row">
     <div class="columns small-8 small-centered">
-      While at Penn I studied algorithms for multi- and single-robot path planning, here are some I implemented (my research is not public yet).
+
+      While at Penn for my masters, I studied path planning in single- and multi-robot settings.
+	  Here are some algorithms I implemented either for research or course projects.
       <br><br>
 
       M* for nonholonomic robots with ROS/Gazebo (<a href="http://biorobotics.ri.cmu.edu/papers/paperUploads/iros2011_wagner.pdf">Wagner et al.</a>):
       <br>
       M* is a search-based planning algorithm for multi-robot settings, based on A*, M* guarantees optimal paths, and minimizes expansions from A* by only expanding states when collisions are detected.
-      <br>
+      I extended it here for non-holonomic settings.
+	  <br>
       <iframe width="420" height="315" src="https://www.youtube.com/embed/n6tQhW_jfP0" frameborder="0" allowfullscreen></iframe>
       <br><br>
 
       HRVO using CUDA (<a href="http://gamma.cs.unc.edu/HRVO/">Snape et al.</a>):
       <br>
-      HRVO (Hybrid Reciprocal Velocity Obstacles) is a method to model moving obstacles, new velocities are chosen that lie outside obstacle boundaries for collision avoidance. This method is highly-parallelizable. More details at: <a href="https://github.com/arizonat/CIS565-FinalProject">https://github.com/arizonat/CIS565-FinalProject</a>
+      HRVO (Hybrid Reciprocal Velocity Obstacles) is a method to model moving obstacles, new velocities are chosen that lie outside obstacle boundaries for collision avoidance. I implemented it for GPUs using CUDA. More details at: <a href="https://github.com/arizonat/CIS565-FinalProject">https://github.com/arizonat/CIS565-FinalProject</a>
       <br>
       <iframe width="420" height="315" src="https://www.youtube.com/embed/9E0RYBbbvJQ" frameborder="0" allowfullscreen></iframe>
       <br><br>
 
       CAPT for quadrotors (<a href="http://ijr.sagepub.com/content/33/1/98.abstract">Turpin et al.</a>):
       <br>
-      CAPT assumes agents are "unlabeled", so any agent can pick any goal (rather than having a specific goal as in traditional multi-robot planning settings). This allows us to optimally select goals for each agent using the hunagarian algorithm.
+      CAPT assumes agents are "unlabeled", so any agent can pick any goal (rather than having a specific goal as in traditional multi-robot planning settings). This allows us to optimally select goals for each agent using the hungarian algorithm.
       <br>
       <iframe width="420" height="315" src="https://www.youtube.com/embed/1Y3JyfZE_aw" frameborder="0" allowfullscreen></iframe>
       <hr>
@@ -403,7 +406,7 @@
 	</div>
       </div>
      <p>
-       This fall I took a GPU programming course and worked on a GPU-based graphics pipeline and path tracer in CUDA. For more informaton checkout my github page for descriptions and performance analysis. <a href="https://github.com/arizonat/Project4-CUDA-Rasterizer">Here</a> for the pipeline and <a href="https://github.com/arizonat/Project3-CUDA-Path-Tracer">here</a> for the path tracer.
+       During my masters at Penn, I took a GPU programming course and worked on a GPU-based graphics pipeline and path tracer in CUDA. For more informaton checkout my github page for descriptions and performance analysis. <a href="https://github.com/arizonat/Project4-CUDA-Rasterizer">Here</a> for the pipeline and <a href="https://github.com/arizonat/Project3-CUDA-Path-Tracer">here</a> for the path tracer.
      </p>
      <hr>
     </div>
