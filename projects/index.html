@@ -148,15 +148,6 @@
 	Most of our electronics system is based off of the same CAN-based technology used in Modlab on the CKbots to make it modular. These board were designed in Eagle (PCB CAD software) and shipped to 4PCB for printing. The overall system relies on "brain" boards and "utility" boards. "Brain boards" as shown below consist of a PIC microcontroller for logic and a CAN connector for bus communications. Each "brain" board is then paired with a secondary board underneath to provide it with specific capabilities, such as clutch, steering wheel, shifting, and overall system logic for the car. In total 8 boards were used on the car that were simple to swap out in case of failure or if additional features were needed.
       </p>
 
-      <div class="row">
-	<div class="columns small-6">
-	  <img width="360" src="../img/projects/fsae-boards.png">
-	</div>
-	<div class="columns small-6">
-	  <img width="360" src="../img/projects/fsae-board-cad.png">
-	</div>
-      </div>
-
       <p>
       Some test footage of our car:
       </p>
@@ -181,7 +172,6 @@
       <p>
 	I worked in Modlab for several years developing software for their CKbots. The CKbots are modular robots that allow us to create arbitrary robot configurations (2 examples below from the Modlab site). Our software was an API designed to enable developers to create applications and behaviours for the CKbots. CKbots could either be controlled individually or in "clusters", for instance, one could specify a cluster of 3 robots to be an "arm" and have the arm follow a predefined motion rather than controlling individual CKbot motions:
       </p>
-      <img src="../img/projects/ckbot2.jpg">
       <p>
 	I worked on earlier versions of the CKbots that communicated via CAN-bus, but required manual screw connections. There were some versions that used magnetic faces to connect and disconnect automatically, but I did not interface with those versions.
       </p>
