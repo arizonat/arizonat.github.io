@@ -41,7 +41,7 @@ let publications = [
     {
         "name": "Towards Auto-tuning of Kalman Filters for Underwater Gliders based on Consistency Metrics",
         "authors": "Levi Cai, Burak Boyacioglu, Sarah Webster, Lora van Uffelen, Kristi Morgansen",
-        "conference": "IEEE OES Oceans 2019",
+        "conference": "IEEE OES OCEANS 2019",
         "paper": "https://ieeexplore.ieee.org/document/8962573",
         "thumbnail": "media/gliders.gif",
     },
@@ -126,4 +126,4 @@ publications.forEach(publication => {
             `);
     }
 });
-section.insertAdjacentHTML('afterbegin', `<h1>Publications</h1>* Indicates equal contribution<br>`);
+section.insertAdjacentHTML('afterbegin', `<h1>Selected Publications</h1>Full publication list at <a href="https://scholar.google.com/citations?user=10VXZoQAAAAJ&hl=en">Google Scholar</a><hr>* Indicates equal contribution<br>`);
