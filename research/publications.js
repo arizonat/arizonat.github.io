@@ -107,14 +107,15 @@ publications.forEach(publication => {
         thumbnail_node = `<img src="${thumbnail}" style="width:180px; max-width: max-content; margin-right: 15px; border-radius: 5px;" width="180" height="auto"/>`;
     }
     if (webpage || paper || code) {
+        link = webpage ? webpage : paper ? paper : code;
         section.insertAdjacentHTML('afterbegin',
             `
             <div style="display:flex;height:auto;margin-bottom: 25px;">
-                <a href="${webpage}"> 
+                <a href="${link}"> 
                     ${thumbnail_node}
                 </a>
                 <div>
-                    <a href="${webpage}"> <b> ${name}</b> </a><br/>
+                    <a href="${link}"> <b> ${name}</b> </a><br/>
                     ${authors}<br/>
                     <i>${conference}</i><br/>
                     ${webpage ? `<a href="${webpage}"> Webpage </a>` : ""}
