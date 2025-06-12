@@ -82,8 +82,13 @@ let publications = [
         "thumbnail": "media/warpauv_rl_thumbnail.mp4",
         "code": "https://github.com/warplab/isaac-auv-env"
     },
-
-
+    {
+        "name": "Measuring and Minimizing Disturbance of Marine Animals to Underwater Vehicles 	",
+        "authors": "Levi Cai, Youenn Jezequel, T. Aran Mooney, Yogesh Girdhar",
+        "conference": "International Symposium on Experimental Robotics (ISER) 2025",
+        "paper": "https://iser2025.org/program/",
+        "thumbnail": "media/dm_example_thumbnail.mp4",
+    },
 ]
 console.log("Loading publications...");
 let section = document.getElementById("publications");
