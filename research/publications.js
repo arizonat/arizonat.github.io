@@ -86,7 +86,7 @@ let publications = [
         "name": "Measuring and Minimizing Disturbance of Marine Animals to Underwater Vehicles 	",
         "authors": "Levi Cai, Youenn Jezequel, T. Aran Mooney, Yogesh Girdhar",
         "conference": "International Symposium on Experimental Robotics (ISER) 2025",
-        "paper": "https://iser2025.org/program/",
+        "paper": "https://arxiv.org/abs/2506.11335",
         "thumbnail": "media/dm_example_thumbnail.mp4",
     },
 ]
