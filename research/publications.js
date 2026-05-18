@@ -57,7 +57,7 @@ let publications = [
         "authors": "Yogesh Girdhar, Nathan McGuire, Levi Cai, Stewart Jamieson, Seth McCammon, Brian Claus, John San Soucie, Jessica Todd, T. Aran Mooney",
         "conference": "IEEE International Conference on Robotics and Automation (ICRA) 2023",
         "paper": "https://ieeexplore.ieee.org/document/10161282",
-        "thumbnail": "media/curee_glamour.jpg",
+        "thumbnail": "media/curee_cusa.gif",
     },
     {
         "name": "Semi-Supervised Visual Tracking of Marine Animals using Autonomous Underwater Vehicles",
@@ -83,11 +83,18 @@ let publications = [
         "code": "https://github.com/warplab/isaac-auv-env"
     },
     {
-        "name": "Measuring and Minimizing Disturbance of Marine Animals to Underwater Vehicles 	",
+        "name": "Measuring and Minimizing Disturbance of Marine Animals to Underwater Vehicles",
         "authors": "Levi Cai, Youenn Jezequel, T. Aran Mooney, Yogesh Girdhar",
         "conference": "International Symposium on Experimental Robotics (ISER) 2025",
         "paper": "https://arxiv.org/abs/2506.11335",
         "thumbnail": "media/dm_example_thumbnail.mp4",
+    },
+    {
+        "name": "Autonomous seeking and mapping coral reef biodiversity hotspots with a multimodal AUV",
+        "authors": "Seth McCammon, Levi Cai, Daniel Yang, John Walsh, John D. Cast, T. Aran Mooney, Yogesh Girdhar",
+        "conference": "Science Robotics 2026 <span style='color: red'>(COVER ARTICLE)</span>",
+        "paper": "https://www.science.org/doi/10.1126/scirobotics.adx9939",
+        "thumbnail": "media/scirob_curee_cropped.jpg",
     },
 ]
 console.log("Loading publications...");
