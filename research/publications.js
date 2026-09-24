@@ -96,6 +96,13 @@ let publications = [
         "paper": "https://www.science.org/doi/10.1126/scirobotics.adx9939",
         "thumbnail": "media/scirob_curee_cropped.jpg",
     },
+    {
+        "name": "A Proxy Consistency Loss for Grounded Fusion of Earth Observation and Location Encoders",
+        "authors": "Zhongying Wang, Kevin Lane, Levi Cai, Morteza Karimzadeh, Esther Rolf",
+        "conference": "IEEE  Conference on Computer Vision and Pattern Recognition (CVPR) Workshops EarthVision 2026",
+        "paper": "https://openaccess.thecvf.com/content/CVPR2026W/EarthVision/html/Wang_A_Proxy_Consistency_Loss_for_Grounded_Fusion_of_Earth_Observation_CVPRW_2026_paper.html",
+        "thumbnail": "media/pcl_embeddings_thumbnail.gif",
+    },
 ]
 console.log("Loading publications...");
 let section = document.getElementById("publications");
